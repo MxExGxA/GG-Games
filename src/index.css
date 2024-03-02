@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mr+Dafoe&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+body {
+  overflow-x: clip;
+}
+
+@layer components {
+  .bg-main-dark {
+    @apply bg-black;
+  }
+  .carousel {
+    @apply relative flex overflow-hidden mt-[80px] text-white w-[1000px] h-[60vh] bg-[rgba(0,0,0,0.4)]  rounded-2xl border-b border-r border-[rgba(255,255,255,0.1)];
+  }
+  .carousel-switches {
+    @apply text-white self-center p-10 h-10 *:w-2 *:h-2 *:bg-white *:rounded-full *:m-2 *:opacity-50 *:ease-in-out *:duration-200  flex items-center justify-center;
+  }
+  .hero-image {
+    @apply absolute top-0 max-h-[50vh] w-full pointer-events-none select-none blur-2xl opacity-50;
+  }
+  .roboto-slab {
+    font-family: "Roboto Slab", serif;
+  }
+  .handy-font {
+    font-family: "Mr Dafoe", cursive;
+  }
+  .rock-salt {
+    font-family: "Rock Salt", cursive;
+  }
+  .clip-right {
+    clip-path: inset(0 2% 0 -10%);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .h-unset {
+    height: unset;
+  }
+}
