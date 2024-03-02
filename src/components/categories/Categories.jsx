@@ -60,7 +60,7 @@ const Categories = () => {
             }
           />
           {categoriesData &&
-            categoriesData.map((category) => (
+            categoriesData?.map((category) => (
               <CategoryRow
                 key={category.name}
                 title={category.name.split(" ")[0]}

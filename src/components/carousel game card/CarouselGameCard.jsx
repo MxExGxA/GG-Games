@@ -22,7 +22,7 @@ const CarouselGameCard = ({ gameData }) => {
       ".\n"
     );
     //split platforms array items into two slices then return the first one
-    platformsRef.current = gameData.platforms.map((p) => {
+    platformsRef.current = gameData?.platforms?.map((p) => {
       return p.name.split(" ")[0].toLowerCase();
     });
 
@@ -54,7 +54,7 @@ const CarouselGameCard = ({ gameData }) => {
         </p>
         <div className="flex items-center m-0 absolute bottom-32  *:mr-2 p-4 pl-0 max-lg:hidden">
           {platformsRef.current &&
-            platformsRef.current.map((platform) => {
+            platformsRef.current?.map((platform) => {
               switch (platform) {
                 case "pc":
                   return <FaWindows key={platform} className="text-l" />;

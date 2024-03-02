@@ -53,7 +53,7 @@ const Trends = () => {
           />
           <div className="wrapper flex flex-wrap justify-center w-full mt-10 mb-5 max-w-[1350px]">
             {trendsData &&
-              trendsData.map((trend) => (
+              trendsData?.map((trend) => (
                 <GameCard key={trend.id} gameData={trend} />
               ))}
           </div>

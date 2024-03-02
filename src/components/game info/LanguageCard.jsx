@@ -10,7 +10,7 @@ const LanguageCard = ({ language, supportTypes }) => {
   let typesValues = ["1", "2", "3"];
   let newTypes = [];
 
-  typesValues.map((type) => {
+  typesValues?.map((type) => {
     if (types.includes(type)) {
       newTypes.push(type);
     } else {
@@ -22,7 +22,7 @@ const LanguageCard = ({ language, supportTypes }) => {
     <>
       <td className="language-name max-w-5 text-sm">{language}</td>
       {newTypes &&
-        newTypes.map((type, index) => {
+        newTypes?.map((type, index) => {
           if (type !== "*") {
             return (
               <td key={index} align="center">

@@ -34,7 +34,7 @@ const FilterDropDown = () => {
       *:w-[200px] max-sm:*:w-full flex-shrink-0 flex-wrap gap-3 p-5 bg-black bg-opacity-70 rounded-md text-white"
       >
         {filter &&
-          filter.map((f, index) => (
+          filter?.map((f, index) => (
             <FilterColumn
               key={index}
               colTitle={f.title}

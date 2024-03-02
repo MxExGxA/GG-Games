@@ -90,7 +90,7 @@ const GameInfo = () => {
                           Multiplayer Modes
                         </h3>
                         <ul className="list *:ml-10 *:truncate *:max-w-48 *:border-l-4 *:pl-2">
-                          {Object.keys(gameInfo.multiplayer_modes[0]).map(
+                          {Object.keys(gameInfo.multiplayer_modes[0])?.map(
                             (mode, index) => {
                               if (gameInfo.multiplayer_modes[0][mode] == true) {
                                 return (

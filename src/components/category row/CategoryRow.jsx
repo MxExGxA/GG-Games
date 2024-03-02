@@ -26,7 +26,7 @@ const CategoryRow = ({ categoryData }) => {
       </div>
       <div className="game-cards relative flex justify-start clip-right mt-2 rounded-xl">
         {categoryData &&
-          categoryData.result.map((game) => (
+          categoryData.result?.map((game) => (
             <GameCard key={game.name} gameData={game} />
           ))}
       </div>

@@ -44,8 +44,8 @@ const filterBuilder = (filter, years, rates, limit) => {
   let bracs = "[]";
   let strBuilder =
     "fields name,cover.url, involved_companies.company.name, involved_companies.developer, platforms.name; ";
-  filter.map((f) => {
-    f.values.map((v) => {
+  filter?.map((f) => {
+    f.values?.map((v) => {
       if (v.checked) {
         ids.push(v.id);
         temp[f.field] = [...ids];

@@ -8,7 +8,7 @@ const LanguageSupport = ({ languageSupports }) => {
 
   useEffect(() => {
     languageSupports &&
-      languageSupports.map((language) => {
+      languageSupports?.map((language) => {
         languages[language.language.name] +=
           language.language_support_type.id.toString();
       });
@@ -32,7 +32,7 @@ const LanguageSupport = ({ languageSupports }) => {
           </thead>
           <tbody>
             {langs &&
-              Object.keys(langs).map((l, index) => (
+              Object.keys(langs)?.map((l, index) => (
                 <tr key={index}>
                   <LanguageCard language={l} supportTypes={langs[l]} />
                 </tr>

@@ -33,7 +33,7 @@ const GameSearch = ({ searchVal, className, maxResults }) => {
     <div className={className}>
       {!loading ? (
         searchResult[0] ? (
-          searchResult.map((result, index) => {
+          searchResult?.map((result, index) => {
             if (index + 1 <= maxResults) {
               return (
                 <div key={index}>

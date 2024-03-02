@@ -32,7 +32,7 @@ const HeroCarousel = ({
         className={"flex items-center w-full h-full"}
       >
         {gameData &&
-          gameData.map((ele) => (
+          gameData?.map((ele) => (
             <CarouselGameCard key={ele.id} gameData={ele} active={active} />
           ))}
       </motion.div>

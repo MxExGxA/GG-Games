@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 const CarouselSwitches = ({ arr, swClick, active }) => {
   return (
     <div className="carousel-switches max-sm:p-0">
-      {arr.map((ele) => (
+      {arr?.map((ele) => (
         <div
           key={ele}
           data-index={ele}
