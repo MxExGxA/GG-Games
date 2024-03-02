@@ -44,7 +44,7 @@ const GameInfo = () => {
   }, [id]);
 
   return (
-    <div className="relative">
+    <div className="relative min-h-lvh">
       {!gameNotFound ? (
         gameInfo && (
           <section className="game-info text-white flex justify-center overflow-y-scroll bg-black">

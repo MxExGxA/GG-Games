@@ -3,7 +3,6 @@ import { useLenis } from "@studio-freight/react-lenis";
 import AllGames from "./components/all games/AllGames";
 import Home from "./components/home/Home";
 import { Routes, Route } from "react-router-dom";
-// import MainLoading from "./components/main loading/MainLoading";
 import GameInfo from "./components/game info/GameInfo";
 import NotFound from "./components/not found/NotFound";
 import BubbleMenu from "./components/bubble menu/BubbleMenu";
@@ -30,7 +29,6 @@ function App() {
 
       <Footer />
     </main>
-    // <MainLoading />
   );
 }
 
