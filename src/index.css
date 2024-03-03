@@ -12,6 +12,9 @@
 body {
   overflow-x: clip;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 @layer components {
   .bg-main-dark {

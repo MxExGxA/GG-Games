@@ -11,7 +11,6 @@ import GameWebsites from "./GameWebsites";
 import SimilarGames from "./SimilarGames";
 import LanguageSupport from "./LanguageSupport";
 import { lazy } from "react";
-import { useLenis } from "@studio-freight/react-lenis";
 import Loading from "../loading/Loading";
 
 const HeaderInfo = lazy(() => import("./GameInfoHeader"));
@@ -22,7 +21,6 @@ const GameInfo = () => {
   const [bgShow, setBgShow] = useState(false);
   const [gameNotFound, setGameNotFound] = useState(false);
   const [loading, setLoading] = useState(true);
-  const lenis = useLenis(() => {});
 
   useEffect(() => {
     const apiRes = async () => {
@@ -38,7 +36,7 @@ const GameInfo = () => {
     apiRes()
       .then((info) => (info[0] ? setGameInfo(info[0]) : setGameNotFound(true)))
       .finally(() => {
-        lenis && lenis.scrollTo(0);
+        window.scrollTo(0, 0);
         setLoading(false);
       });
   }, [id]);

@@ -1,30 +1,27 @@
 import { useEffect, useState } from "react";
 import { CiSquareChevRight, CiSquareChevLeft } from "react-icons/ci";
 import PropTypes from "prop-types";
-import { useLenis } from "@studio-freight/react-lenis";
 
 const Pagination = ({ pagesCount, currPage, setCurrPage }) => {
-  const lenis = useLenis(() => {});
-
   const [pagesArr, setPagesArr] = useState([]);
 
   const handlePrevPage = () => {
     if (currPage > 1) {
       setCurrPage(currPage - 1);
-      lenis.scrollTo("#allGames");
+      window.scrollTo(0, 0);
     }
   };
 
   const handleNextPage = () => {
     if (currPage < pagesArr[pagesArr.length - 1]) {
       setCurrPage(currPage + 1);
-      lenis.scrollTo("#allGames");
+      window.scrollTo(0, 0);
     }
   };
 
   const handlePageNumClick = (e) => {
     setCurrPage(+e.target.innerText);
-    lenis.scrollTo("#allGames");
+    window.scrollTo(0, 0);
   };
 
   useEffect(() => {

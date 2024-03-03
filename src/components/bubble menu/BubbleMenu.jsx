@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { useRef, useState } from "react";
-import { useLenis } from "@studio-freight/react-lenis";
 import { useNavigate, useLocation } from "react-router-dom";
 import GameSearch from "../game search/GameSearch";
 
@@ -51,7 +50,6 @@ const BubbleMenu = () => {
   const [searchVal, setSearchVal] = useState("");
   const searchRef = useRef();
 
-  const lenis = useLenis(() => {});
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -71,11 +69,6 @@ const BubbleMenu = () => {
 
   const handleSearch = (e) => {
     setSearchVal(e.target.value);
-  };
-
-  const handleScroll = (elementId) => {
-    lenis.scrollTo(elementId);
-    setOpen(false);
   };
 
   const handleNavigate = (path) => {
@@ -149,18 +142,20 @@ const BubbleMenu = () => {
         </motion.div>
         {location.pathname === "/" ? (
           <>
-            <motion.div
+            <motion.a
+              href="#trends"
               variants={listItemVars}
-              onClick={() => handleScroll("#trends")}
+              onClick={() => setOpen(false)}
             >
               Trends
-            </motion.div>
-            <motion.div
+            </motion.a>
+            <motion.a
+              href="#categories"
               variants={listItemVars}
-              onClick={() => handleScroll("#categories")}
+              onClick={() => setOpen(false)}
             >
               Categories
-            </motion.div>
+            </motion.a>
             <motion.div
               variants={listItemVars}
               onClick={() => handleNavigate("allgames")}

@@ -1,6 +1,5 @@
 import logo from "/gg_logo-01.png";
 import { CiSearch } from "react-icons/ci";
-import { useLenis } from "@studio-freight/react-lenis";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import GameSearch from "../game search/GameSearch";
 import { useRef, useState } from "react";
@@ -13,14 +12,6 @@ const NavBar = () => {
 
   const navigate = useNavigate();
   const location = useLocation();
-
-  const lenis = useLenis(() => {});
-  const trends = () => {
-    lenis.scrollTo("#trends");
-  };
-  const categories = () => {
-    lenis.scrollTo("#categories");
-  };
 
   const handleHomeNavigate = () => {
     navigate("/");
@@ -81,13 +72,10 @@ const NavBar = () => {
               <Link to={"/"}>Home</Link>
             ) : (
               <>
-                <div
-                  className="bg-red-700 px-3 py-1 rounded-sm"
-                  onClick={trends}
-                >
+                <a href="#trends" className="bg-red-700 px-3 py-1 rounded-sm">
                   Trends
-                </div>
-                <div onClick={categories}>Categories</div>
+                </a>
+                <a href="#categories">Categories</a>
               </>
             )}
             {!location.pathname.startsWith("/allgames") && (
