@@ -9,7 +9,7 @@ const apiRequest = async (config) => {
   try {
     const results = await axios({
       method: config.method,
-      url: `${corsAnywhere + Api}/${config.path}`,
+      url: `${Api}/${config.path}`,
       headers: {
         "Content-Type": "text/plain",
         "Client-ID": client_id,
