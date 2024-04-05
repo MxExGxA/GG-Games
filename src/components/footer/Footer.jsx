@@ -9,10 +9,42 @@ const Footer = () => {
         <div className="py-5 px-10">
           <h3 className="menu-header font-bold text-2xl">Follow us</h3>
           <ul className="menu ml-10 *:text-xl">
-            <li>Facebook</li>
-            <li>Twitter</li>
-            <li>Instagram</li>
-            <li>Linkedin</li>
+            <li>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.facebook.com/elsayed.elghazy.5"
+              >
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://twitter.com/MxExGxA11"
+              >
+                Twitter
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.linkedin.com/in/elsayed-elghazy-1851011b1/"
+              >
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://www.instagram.com/elsayed_elghazy/"
+              >
+                Linkedin
+              </a>
+            </li>
           </ul>
         </div>
         <div className="py-5 px-10">
