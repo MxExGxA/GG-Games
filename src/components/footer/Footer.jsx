@@ -31,7 +31,7 @@ const Footer = () => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://www.linkedin.com/in/elsayed-elghazy-1851011b1/"
+                href="https://www.instagram.com/elsayed_elghazy/"
               >
                 Instagram
               </a>
@@ -40,7 +40,7 @@ const Footer = () => {
               <a
                 target="_blank"
                 rel="noreferrer"
-                href="https://www.instagram.com/elsayed_elghazy/"
+                href="https://www.linkedin.com/in/elsayed-elghazy-1851011b1/"
               >
                 Linkedin
               </a>
