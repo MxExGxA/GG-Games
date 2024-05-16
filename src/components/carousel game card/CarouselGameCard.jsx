@@ -48,7 +48,7 @@ const CarouselGameCard = ({ gameData }) => {
         </h1>
         <p
           ref={paragraphRef}
-          className="roboto-slab text-xl max-lg:text-lg text-justify w-[100%] line-clamp-6 max-lg:line-clamp-1 max-lg:hidden"
+          className="roboto-slab text-lg max-lg:text-lg text-justify w-[100%] line-clamp-6 max-xl:line-clamp-2 max-lg:hidden"
         >
           {gameData ? gameData.summary : "Loaing..."}
         </p>
