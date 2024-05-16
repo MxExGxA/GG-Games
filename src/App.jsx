@@ -6,10 +6,12 @@ import GameInfo from "./components/game info/GameInfo";
 import NotFound from "./components/not found/NotFound";
 import BubbleMenu from "./components/bubble menu/BubbleMenu";
 import Footer from "./components/footer/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   return (
     <main className={`bg-main-dark absolute w-lvw top-0 h-lvh overflow-x-clip`}>
+      <Analytics />
       <header className="absolute top-0 z-50">
         <NavBar />
       </header>
